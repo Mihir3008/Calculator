@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    float num1, num2, n;
+    int c;
+    do
+    {
+        cout<<"1. Addition\n";
+        cout<<"2. Subtraction\n";
+        cout<<"3. Multiplication\n";
+        cout<<"4. Division\n";
+        cout<<"5. Exit\n\n";
+        cout<<"Enter Your Choice(1-5): ";
+        cin>>c;
+        if(c>=1 && c<=4)
+        {
+            cout<<"\nEnter any two Numbers: ";
+            cin>>num1>>num2;
+        }
+        switch(c)
+        {
+            case 1:
+                n = num1+num2;
+                cout<<"\nResult = "<<n;
+                break;
+            case 2:
+                n = num1-num2;
+                cout<<"\nResult = "<<n;
+                break;
+            case 3:
+                n = num1*num2;
+                cout<<"\nResult = "<<n;
+                break;
+            case 4:
+                n = num1/num2;
+                cout<<"\nResult = "<<n;
+                break;
+            case 5:
+                return 0;
+            default:
+                cout<<"\nWrong Choice!";
+                break;
+        }
+        cout<<"\n------------------------\n";
+    }while(c!=5);
+    cout<<endl;
+    return 0;
+}
